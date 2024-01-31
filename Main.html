@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="theme-color" content="#ffffff">
+    <script src="js/main.js"></script>
+</head>
+<body style="background-color:#F7F3E3;">
+    <!-- Первая секция -->
+        <section class="main-section">
+            <div class="container main-section__nav-container">
+                <nav class="main-section__nav nav-menu">
+                    <ul class="nav-menu__list">
+                        <li class="nav-menu__list-item logo">
+                            <div class="logo_wrapper"> 
+                                <img src="/icons/logo.svg" alt="logo" class="main-section__logo" width="52" height="57">
+                            <p class="conv">Convert Me</p>
+                           </div>
+                        </li>
+                        <li class="nav-menu__list-item"><a href="#">Help</a></li>
+                        <li class="nav-menu__list-item"><a href="#">Login</a></li>
+                        <li class="nav-menu__list-item"><a href="#">Sign up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section class="second-section">
+            <div class="second-section__center-info">
+            <div class="second-section__info">
+                <h1 class="second-section__info-title">File converter</h1> 
+                <p class="second-section__info-par">Convert your audio/video files to presented <br>
+                     <span class="second-section__info-par-span">formats</span>
+                    </p>
+            </div>
+            
+            </div>
+            <!-- <div class="second-section__converter-container">
+                <h2 class="second-section__converter-container-title">Drop file here</h2>
+                <div class="second-section__converter-choose">
+                    <label class="second-section__converter-choose-text" for="fileInput"><span>Choose</span>
+                    <input class="second-section__converter-choose-input" type="file" id="fileInput" name="fileInput" accept=".txt, .pdf, .doc, .docx">
+                    </label>
+                </div>
+            </div>
+             -->
+
+            <div class="second-section__converter-container2">
+                <p class="second-section__converter-container-title2">M2U01160.MPG</p>
+                <p class="second-section__converter-container-to2">To</p>
+                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    class="second-section__converter-container-settings2">
+                    ...
+                </button>
+                <img onclick="openModal()" id="settingsIcon" src="/icons/settingsIcon.svg" alt="settings Icon" class="second-section__converter-container-icon2" >
+                <p class="second-section__converter-container-s2">Size:</p>
+                <p class="second-section__converter-container-size2">10.6 MB</p>
+                <input class="second-section__converter-container-convertInput2" type="submit" value="Convert">
+            </div>
+
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+
+                    <span class="close-btn" onclick="closeModal()">&times;</span>
+                    <div class="modal-content-types">
+                        <p class="modal-content-types-video">Video</p>
+                        <p class="modal-content-types-audio">Audio</p>
+                    </div>
+                    
+                    <label for="video_codec">Codec:</label>
+                    <select id="video_codec" name="video_codec">
+                        <option value="option1">Опция 1</option>
+                        <option value="option2">Опция 2</option>
+                        <option value="option3">Опция 3</option>
+                    </select>
+
+                    <label for="video_bitrate">Bitrate:</label>
+                    <select id="video_bitrate" name="video_bitrate">
+                        <option value="option1">Опция 1</option>
+                        <option value="option2">Опция 2</option>
+                        <option value="option3">Опция 3</option>
+                    </select>
+
+                    <label for="video_framerate">Framerate:</label>
+                    <select id="video_framerate" name="video_framerate">
+                        <option value="option1">Опция 1</option>
+                        <option value="option2">Опция 2</option>
+                        <option value="option3">Опция 3</option>
+                    </select>
+
+
+                    <label for="audio_codec">Codec:</label>
+                    <select id="audio_codec" name="audio_codec">
+                        <option value="option1">Опция 1</option>
+                        <option value="option2">Опция 2</option>
+                        <option value="option3">Опция 3</option>
+                    </select>
+
+                    <label for="audio_bitrate">Bitrate:</label>
+                    <select id="audio_bitrate" name="audio_bitrate">
+                        <option value="option1">Опция 1</option>
+                        <option value="option2">Опция 2</option>
+                        <option value="option3">Опция 3</option>
+                    </select>
+
+                    <label for="audio_framerate">Framerate:</label>
+                    <select id="audio_framerate" name="audio_framerate">
+                        <option value="option1">Опция 1</option>
+                        <option value="option2">Опция 2</option>
+                        <option value="option3">Опция 3</option>
+                    </select>
+
+                    <label for="audio_channels">Channels:</label>
+                    <select id="audio_channels" name="audio_channels">
+                        <option value="2">Stereo</option>
+                        <option value="1">Mono</option>
+                    </select>
+
+                    <label for="audio_volume">Volume:</label>
+                    <input type="range" id="audio_volume" name="volume" min="0" max="100" step="1" value="100" oninput="updateVolume(this.value)">
+                    <p id="volumeValue">50%</p>
+                </div>
+            </div>
+
+            
+        </section>
+        
+        <section class="third-section">
+            <div class="third-section__adv">
+                <h3 class="third-section__adv-title">300+ supported formats</h3>
+                <p class="third-section__adv-par">
+                    We support over 25,600 <br>
+                    different conversions between <br>
+                    over 300 different file formats. <br>
+                    More than any other converter. <br>
+                </p>
+            </div>
+
+            <div class="third-section__adv">
+                <h3 class="third-section__adv-title">Fast and easy</h3>
+                <p class="third-section__adv-par">
+                    Simply drag and drop your files <br>
+                    onto the page, select an output <br>
+                    format and click the "Convert" <br>
+                    button. Please wait a moment <br>
+                    for the process to complete. <br>
+                </p>
+            </div>
+
+            <div class="third-section__adv">
+                <h3 class="third-section__adv-title">Custom Settings</h3>
+                <p class="third-section__adv-par">
+                    Most conversion types support <br>
+                    advanced settings. For example, <br>
+                    in a video converter you can <br>
+                    select quality, aspect ratio, <br>
+                    codec and other parameters, <br>
+                    rotate and flip the video. <br>
+                </p>
+            </div>
+
+            <div class="third-section__adv">
+                <h3 class="third-section__adv-title">Safety guaranteed</h3>
+                <p class="third-section__adv-par">
+                We delete downloaded files <br>
+                instantly, and converted ones <br>
+                after 24 hours. No one has <br>
+                access to your files and your <br>
+                privacy is 100% guaranteed. <br>
+                </p>
+            </div>
+        </section>
+</body>
+</html>
