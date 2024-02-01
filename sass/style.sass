@@ -238,15 +238,16 @@ a:hover
         width: 184px
 
 .third-section
-    width: 858px
     display: flex
-    flex-wrap: wrap
-    justify-content: space-between
-    position: relative
-    left: 290px
+    justify-content: center
+    &__cont
+        width: 858px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
     &__adv
         box-sizing: border-box
-        display: flex // Изменено с display: inline;
+        display: flex
         justify-content: center
         align-items: center
         justify-items: center
@@ -254,7 +255,7 @@ a:hover
         margin-bottom: 100px
         line-height: 29px
         margin-right: 15px
-        text-align: center // Добавлено для центрирования текста
+        text-align: center
         width: 400px
 
     &:nth-child(even)
@@ -271,7 +272,7 @@ a:hover
     font-size: 24px
     margin-bottom: 20px
     line-height: 29px
-    text-align: center // Добавлено для центрирования текста
+    text-align: center
 
 .modal
     display: none
@@ -280,7 +281,7 @@ a:hover
     left: 50%
     transform: translate(-50%, -50%)
     border: none
-    background-color: #fff
+    background-color: #2D2D2A
     padding: 20px
     z-index: 1
     &-content
@@ -288,8 +289,146 @@ a:hover
         width: 400px
         height: 500px
 
-.close
+.modal-header
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 60px
+    background-color: #464646
+    display: flex
+    justify-content: center
+    justify-items: center
+    text-align: center
+    align-items: center
+
+.modal-content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    justify-items: center
+    align-content: center
+    align-items: center
+    width: 400px
+    height: 200px
+    margin-top: 80px
+
+.label-select-pair-video
+    display: flex
+    margin-bottom: 30px
+    justify-content: space-between
+    justify-items: center
+    align-content: center
+    align-items: center
+
+.label-select-pair-audio
+    display: none
+    margin-bottom: 30px
+    justify-content: space-between
+    justify-items: center
+    align-content: center
+    align-items: center
+#volumeValue
+    display: inline
+    color: #F7F3E3
+    margin-right: 40px
+
+label
+    margin-left: 85px
+    color: #F7F3E3
+
+select
+    display: flex
+    text-align: center
+    justify-content: center
+    justify-items: center
+    align-items: center
+    align-content: center
+    width: 140px
+    height: 30px
+    margin-right: 55px
+    color: #2D2D2A
+    border: none
+    border-radius: 5px
+    transition: height 0.4s, background-color 0.2s, color 0.2s
+select:hover
+    height: 35px
+    color: #F7F3E3
+    background-color: #D33F49
+.data-input
+    display: flex
+    text-align: center
+    justify-content: center
+    justify-items: center
+    align-items: center
+    align-content: center
+    width: 140px
+    height: 30px
+    margin-right: 55px
+    color: #2D2D2A
+    border: none
+    border-radius: 5px
+    transition: height 0.4s, background-color 0.2s, color 0.2s
+.data-input:hover
+    height: 35px
+    color: #F7F3E3
+    background-color: #D33F49
+.close-btn
     position: absolute
     top: 10px
     right: 10px
     cursor: pointer
+    font-size: 24px
+    width: 20px
+    transition: width 0.2s, background-color 0.2s, color 0.2s
+    color: #F7F3E3
+.close-btn:hover
+    background-color: #D33F49
+    color: #2D2D2A
+
+.modal-content-types
+    display: flex
+    justify-content: center
+    justify-items: center
+    text-align: center
+    flex-direction: row
+
+.modal-content-types-video
+    color: #F7F3E3
+    font-size: 18
+    margin-right: 70px
+    border: none
+    border-radius: 5px
+    background-color: #2D2D2A
+    cursor: pointer
+    transition: height 0.2s, width 0.2s, background-color 0.2s
+    width: 80px
+    height: 30px
+
+.modal-content-types-video:hover
+    background-color: #D33F49
+    height: 35px
+    width: 85px
+.modal-content-types-video:active
+    background-color: #D33F49
+    height: 35px
+    width: 85px
+
+.modal-content-types-audio
+    color: #F7F3E3
+    font-size: 18
+    border: none
+    border-radius: 5px
+    background-color: #2D2D2A
+    cursor: pointer
+    transition: height 0.2s, width 0.2s, background-color 0.2s
+    width: 80px
+    height: 30px
+.modal-content-types-audio:hover
+    background-color: #D33F49
+    height: 35px
+    width: 85px
+.modal-content-types-audio:active
+    background-color: #D33F49
+    height: 35px
+    width: 85px

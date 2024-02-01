@@ -62,66 +62,63 @@
 
 
             <div id="myModal" class="modal">
-                <div class="modal-content">
-
-                    <span class="close-btn" onclick="closeModal()">&times;</span>
+                <div class="modal-header">
                     <div class="modal-content-types">
-                        <p class="modal-content-types-video">Video</p>
-                        <p class="modal-content-types-audio">Audio</p>
+                        <button class="modal-content-types-video" onclick="showVideo()">Video</button>
+                        <button class="modal-content-types-audio" onclick="showAudio()">Audio</button>
                     </div>
-                    
+                    <span class="close-btn" onclick="closeModal()">&times;</span>
+                </div>
+                <div class="modal-content">
+                        <!-- for video -->
+                <div class="label-select-pair-video">
                     <label for="video_codec">Codec:</label>
-                    <select id="video_codec" name="video_codec">
-                        <option value="option1">Опция 1</option>
-                        <option value="option2">Опция 2</option>
-                        <option value="option3">Опция 3</option>
-                    </select>
-
+                        <select id="video_codec" name="video_codec">
+                            <option value="option1">Опция 1</option>
+                            <option value="option2">Опция 2</option>
+                            <option value="option3">Опция 3</option>
+                        </select>
+                    </div>
+                    <div class="label-select-pair-video">
                     <label for="video_bitrate">Bitrate:</label>
-                    <select id="video_bitrate" name="video_bitrate">
-                        <option value="option1">Опция 1</option>
-                        <option value="option2">Опция 2</option>
-                        <option value="option3">Опция 3</option>
-                    </select>
+                    <input class="data-input" type="text" id="video_bitrate" name="video_bitrate"/>
+                    </div>
 
+                    <div class="label-select-pair-video">
                     <label for="video_framerate">Framerate:</label>
-                    <select id="video_framerate" name="video_framerate">
-                        <option value="option1">Опция 1</option>
-                        <option value="option2">Опция 2</option>
-                        <option value="option3">Опция 3</option>
-                    </select>
+                    <input class="data-input" type="text" id="video_framerate" name="video_framerate"/> 
+                    </div>
 
+                    <!-- for audio -->
 
+                    <div class="label-select-pair-audio">
                     <label for="audio_codec">Codec:</label>
                     <select id="audio_codec" name="audio_codec">
                         <option value="option1">Опция 1</option>
                         <option value="option2">Опция 2</option>
                         <option value="option3">Опция 3</option>
                     </select>
-
+                    </div>
+                    <div class="label-select-pair-audio">
                     <label for="audio_bitrate">Bitrate:</label>
-                    <select id="audio_bitrate" name="audio_bitrate">
-                        <option value="option1">Опция 1</option>
-                        <option value="option2">Опция 2</option>
-                        <option value="option3">Опция 3</option>
-                    </select>
-
+                    <input class="data-input" id="audio_bitrate" name="audio_bitrate"/>
+                    </div>
+                    <div class="label-select-pair-audio">
                     <label for="audio_framerate">Framerate:</label>
-                    <select id="audio_framerate" name="audio_framerate">
-                        <option value="option1">Опция 1</option>
-                        <option value="option2">Опция 2</option>
-                        <option value="option3">Опция 3</option>
-                    </select>
-
+                    <input class="data-input" id="audio_framerate" name="audio_framerate"/>
+                    </div>
+                    <div class="label-select-pair-audio">
                     <label for="audio_channels">Channels:</label>
                     <select id="audio_channels" name="audio_channels">
                         <option value="2">Stereo</option>
                         <option value="1">Mono</option>
                     </select>
-
+                    </div>
+                    <div class="label-select-pair-audio">
                     <label for="audio_volume">Volume:</label>
-                    <input type="range" id="audio_volume" name="volume" min="0" max="100" step="1" value="100" oninput="updateVolume(this.value)">
-                    <p id="volumeValue">50%</p>
+                    <input type="range" id="audio_volume" name="volume" min="0" max="200" step="1" value="100" oninput="updateVolume(this.value)">
+                    <p id="volumeValue">100%</p>
+                    </div>
                 </div>
             </div>
 
@@ -129,6 +126,7 @@
         </section>
         
         <section class="third-section">
+            <div class="third-section__cont">
             <div class="third-section__adv">
                 <h3 class="third-section__adv-title">300+ supported formats</h3>
                 <p class="third-section__adv-par">
@@ -171,6 +169,7 @@
                 access to your files and your <br>
                 privacy is 100% guaranteed. <br>
                 </p>
+            </div>
             </div>
         </section>
 </body>
