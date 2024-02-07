@@ -16,8 +16,8 @@
     font-weight: bold
     font-style: normal
 
-$color-black: #262726
-$color-grey: rgba(217, 217, 217, 0.10)
+$color-white: #F7F3E3
+$color-black: #2D2D2A
 
 html
     font-family: "moseratT"
@@ -30,10 +30,9 @@ body
     background-repeat: no-repeat
     background-attachment: fixed
     background-size: 100%
-    background-image: linear-gradient(215deg,hsl(108deg 45% 34%) 0%,hsl(96deg 21% 23%) 33%,hsl(99deg 2% 15%) 67%,hsl(120deg 2% 9%) 100%)
 
 .container
-    max-width: 1140px
+    min-width: 1140px
     margin: 0 auto
 
 .main-section
@@ -43,172 +42,137 @@ body
     overflow: hidden
     margin-bottom: 71px
     &__nav-container
+        background-color: #2D2D2A
         display: flex
         flex-direction: row
-        justify-content: space-between
+        justify-content: center
         height: 126px
         align-items: center
-        margin-bottom: 160px
+        margin-bottom: 112px
     &__logo
         width: 143px
     &__content-container
         position: relative
         display: flex
         flex-direction: row
-    &__search-zone
-        display: flex
-        justify-content: center
-        align-items: center
-        flex-direction: column
-    &__title
-        font-size: 48px
-        color: white
-        margin-bottom: 64px
-    &__zone-search
-        border-radius: 100px
-        border: none
-        width: 757px
-        height: 75px
-        margin-bottom: 69px
-        padding: 0 50px
-    &__button
-        display: flex
-        justify-content: center
-        align-items: center
-    &__buttons-add
-        width: 165px
-        height: 46px
-        background: #262726
-        color: white
-        border: none
-        border-radius: 10px
-        font-size: 32px
-        margin-right: 150px
-    &__buttons-filter
-        width: 165px
-        height: 46px
-        background: #262726
-        font-size: 32px
-        color: white
-        border: none
-        border-radius: 10px
-    &__buttons-delete
-        width: 100px
-        height: 50px
-        background: #262726
-        color: white
-        border: none
-        border-radius: 10px
-        font-size: 16px
-    &__search
-        position: relative
-    &__search-icon
-        position: absolute
-        top: 18px
-        left: 700px
-        color: #262726
+
+.logo_wrapper
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
 
 .nav-menu
     &__list
         display: flex
         align-items: center
         flex-direction: row
+        justify-content: center
     &__list-item
         margin-right: 110px
-        font-size: 24px
-        color: white
-        &:last-child
-            margin-right: 0px
+        font-size: 36px
+        color: #F7F3E3
 
-.advice
+.conv
     display: flex
-    justify-content: center
     align-items: center
-    background: $color-black
-    width: 138px
-    height: 31px
-    outline: 1px solid white
+    color: #F7F3E3
 
-select
-    text-align-last: center
-    padding-right: 0 39px
+a:link
+    color: #F7F3E3
+    background-color: transparent
+    text-decoration: none
+
+a:visited
+    color: #F7F3E3
+    background-color: transparent
+    text-decoration: none
+
+a:hover
+    color: #F7F3E3
+    background-color: transparent
+    text-decoration: underline
 
 .second-section
-    &__container
-        border-radius: 50px
-        background: rgba(217, 217, 217, 0.20)
-        width: 946px
-        height: 197px
-        display: flex
-        align-content: center
-        align-items: center
-        overflow-wrap: break-word
-        margin-bottom: 80px
-
-.advice-item
-    display: block
-    position: relative
-    left: 25px
-    margin-right: 25px
-    &__title
-        font-size: 24px
-        font-weight: bold
-        color: white
-        margin-bottom: 16px
-    &__text
-        font-size: 20px
-        font-weight: 600
-        color: white
-        margin-bottom: 15px
-
-a
-    text-decoration: none
-    &:visited
-        color: white
-
-.modal
-    display: none
-    position: fixed
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    width: 60%
-    max-width: 400px
     height: auto
-    background-color: rgba(0, 0, 0, 0.5)
-    padding: 15px
-    border-radius: 8px
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
-    &-content
-        background-color: #fff
-        padding: 20px
-        border-radius: 8px
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    margin-bottom: 221px
+    &__center-info
+        display: flex
+        justify-content: center
+        align-items: center
+    &__info
+        display: flex
+        justify-content: center
+        flex-direction: column
+        align-items: center
+        margin-bottom: 118px
+    &__info-title
+        display: inline-flex
+        font-size: 64px
+        color: #000
+        margin-bottom: 60px
+    &__info-par
+        display: inline-flex
+        font-size: 36px
+        color: #000
+        text-align: center
+        flex-direction: column
+        margin-bottom: 100px
 
-.close-modal
+.center-cont
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    margin-bottom: 10px
+
+.center-label
+    font-size: 24px
+    flex: 1
+    margin-bottom: 25px
+
+.center-input
+    font-size: 24px
+    flex: 2
+    width: 100%
+    padding: 5px
+    border: 1px solid #ccc
+    border-radius: 4px
+    outline: none
+    box-sizing: border-box
+    margin-bottom: 25px
+
+.center-area
+    font-size: 24px
+    flex: 2
+    width: 600px
+    padding: 5px
+    border: 1px solid #ccc
+    border-radius: 4px
+    outline: none
+    resize: vertical
+    box-sizing: border-box
+    margin-bottom: 50px
+
+.second-section__info-par-span
+    margin-top: 15px
+
+.sendEmail
+    width: 90px
+    height: 40px
+    border: none
+    border-radius: 5px
+    color: #F7F3E3
+    font-size: 24px
+    background-color: #2D2D2A
+    transition: height 0.2s, width 0.2s, background-color 0.2s
     cursor: pointer
-    font-size: 18px
-    color: #555
-    float: right
-    margin-top: -10px
-    margin-right: -10px
-
-.modal-content label
-    display: block
-    margin-bottom: 15px
-
-.modal-content textarea
-    margin-bottom: 15px
-
-.modal-content input
-    margin-bottom: 15px
-
-.modal-content button
-    display: block
-    margin-bottom: 15px
-
-.modal-content h2
-    display: block
-    margin-bottom: 15px
-
-
+    &:hover
+        background-color: #D33F49
+        height: 45px
+        width: 95px

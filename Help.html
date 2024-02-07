@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Me</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <meta name="theme-color" content="#ffffff">
+    <script src="js/help.js"></script>
+</head>
+<body style="background-color:#F7F3E3;">
+    <!-- Первая секция -->
+        <section class="main-section">
+            <div class="container main-section__nav-container">
+                <nav class="main-section__nav nav-menu">
+                    <ul class="nav-menu__list">
+                        <li class="nav-menu__list-item logo">
+                            <div class="logo_wrapper"> 
+                                <a href="Main.html"><img src="/icons/logo.svg" alt="logo" class="main-section__logo" width="52" height="57">
+                                <p class="conv">Convert Me</p></a>
+                           </div>
+                        </li>
+                        <li class="nav-menu__list-item"><a href="#">Help</a></li>
+                        <li class="nav-menu__list-item"><a href="#">Login</a></li>
+                        <li class="nav-menu__list-item"><a href="#">Sign up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section class="second-section">
+            <div class="second-section__center-info">
+                <div class="second-section__info">
+                    <h1 class="second-section__info-title">Help us become better</h1>
+                    <p class="second-section__info-par">If you have any comments on the operation of our site<br>
+                        <span class="second-section__info-par-span">or any suggestions, write to us!</span>
+                    </p>
+                    <div class="center-cont">
+                        <label class="center-label" for="emailInput">Email:</label>
+                        <input class="center-input" type="email" id="emailInput" name="email">
+                    </div>
+                    <div class="center-cont">
+                        <label class="center-label" for="emailSubjectInput">Email Subject:</label>
+                        <input class="center-input" type="text" id="emailSubjectInput" name="emailSubject">
+                    </div>
+                    <div class="center-cont">
+                        <label class="center-label" for="emailTextInput">Email Text:</label>
+                        <textarea class="center-area" id="emailTextInput" name="emailText" rows="4"></textarea>
+                    </div>
+                    <input class="sendEmail" type="submit" value="Send">
+                </div>
+            </div>
+        </section>
+</body>
+</html>

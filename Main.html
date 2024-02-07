@@ -16,11 +16,12 @@
                     <ul class="nav-menu__list">
                         <li class="nav-menu__list-item logo">
                             <div class="logo_wrapper"> 
-                                <img src="/icons/logo.svg" alt="logo" class="main-section__logo" width="52" height="57">
-                            <p class="conv">Convert Me</p>
+                                <a href="Main.html"><img src="/icons/logo.svg" alt="logo" class="main-section__logo" width="52" height="57">
+                                    <p class="conv">Convert Me</p>
+                                </a>
                            </div>
                         </li>
-                        <li class="nav-menu__list-item"><a href="#">Help</a></li>
+                        <li class="nav-menu__list-item"><a href="Help.html">Help</a></li>
                         <li class="nav-menu__list-item"><a href="#">Login</a></li>
                         <li class="nav-menu__list-item"><a href="#">Sign up</a></li>
                     </ul>
@@ -37,27 +38,95 @@
             </div>
             
             </div>
-            <!-- <div class="second-section__converter-container">
-                <h2 class="second-section__converter-container-title">Drop file here</h2>
-                <div class="second-section__converter-choose">
-                    <label class="second-section__converter-choose-text" for="fileInput"><span>Choose</span>
-                    <input class="second-section__converter-choose-input" type="file" id="fileInput" name="fileInput" accept=".txt, .pdf, .doc, .docx">
-                    </label>
+                <div class="second-section__converter-container" id="fileContainer">
+                    <h2 class="second-section__converter-container-title">Drop file here</h2>
+                    <div class="second-section__converter-choose">
+                        <label class="second-section__converter-choose-text" for="fileInput">
+                            <span>Choose</span>
+                                    <input class="second-section__converter-choose-input" type="file" id="fileInput" name="fileInput"
+                                        accept="audio/*,video/*" onchange="handleFileSelect()">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="second-section__converter-container2" id="resultContainer" style="display: none;">
+                    <p class="second-section__converter-container-title2" id="fileName"></p>
+                    <p class="second-section__converter-container-to2">To</p>
+                    <button id="listOfFormars" onclick="openModalControl2()" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="second-section__converter-container-settings2">
+                        ...
+                    </button>
+
+
+
+
+                <div id="myModal2" class="modal2">
+                <div class="modal-header2">
+                    <div class="modal-content-types2">
+                        <button class="modal-content-types-video2" onclick="showVideo2()">Video</button>
+                        <button class="modal-content-types-audio2" onclick="showAudio2()">Audio</button>
+                    </div>
+                    <span class="close-btn2" onclick="closeModal2()">&times;</span>
+                </div>
+                <div class="modal-content2">
+                   <div class="allcontent2">
+                        <!-- for video -->
+                        <div class="video-format2">
+                            <ul>
+                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">MP4</span></li>
+                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">MOV</span></li>
+                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">AVI</span></li>
+                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">MPEG2</span></li>
+                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">WEBM</span></li>
+                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">MKV</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- for audio -->
+
+                        <div class="audio-format2">
+                                            <ul>
+                                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">MP3</span></li>
+                                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">FLAC</span></li>
+                                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">WAV</span></li>
+                                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">MP2</span></li>
+                                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">AAC</span></li>
+                                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">OGG</span></li>
+                                            </ul>   
+                        </div>
+                    </div>
                 </div>
             </div>
-             -->
 
-            <div class="second-section__converter-container2">
-                <p class="second-section__converter-container-title2">M2U01160.MPG</p>
-                <p class="second-section__converter-container-to2">To</p>
-                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                    class="second-section__converter-container-settings2">
-                    ...
-                </button>
-                <img onclick="openModal()" id="settingsIcon" src="/icons/settingsIcon.svg" alt="settings Icon" class="second-section__converter-container-icon2" >
+
+
+                            <div id="myModal4" class="modal4">
+                                <div class="modal-header4">
+                                    <div class="modal-content-types4">
+                                        <button class="modal-content-types-audio4" onclick="showAudio4()">Audio</button>
+                                    </div>
+                                    <span class="close-btn4" onclick="closeModal4()">&times;</span>
+                                </div>
+                                <div class="modal-content4">
+                                    <div class="allcontent4">
+                            
+                                        <div class="audio-format4">
+                                            <ul>
+                                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">MP3</span></li>
+                                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">FLAC</span></li>
+                                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">WAV</span></li>
+                                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">MP2</span></li>
+                                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">AAC</span></li>
+                                                <li><span class="format-modal2" onclick="formatModal(this)" name="future_extension">OGG</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                <img onclick="openModalControl()" id="settingsIcon" src="/icons/settingsIcon.svg" alt="settings Icon" class="second-section__converter-container-icon2" >
                 <p class="second-section__converter-container-s2">Size:</p>
-                <p class="second-section__converter-container-size2">10.6 MB</p>
-                <input class="second-section__converter-container-convertInput2" type="submit" value="Convert">
+                <p id="sizeOfFile" class="second-section__converter-container-size2">10.6 MB</p>
+                <input id="convertFile" class="second-section__converter-container-convertInput2" onclick="converterOfFileHandler()" type="submit" value="Convert">
             </div>
 
 
@@ -74,7 +143,7 @@
                 <div class="label-select-pair-video">
                     <label for="video_codec">Codec:</label>
                         <select id="video_codec" name="video_codec">
-                            <option value="option1">Опция 1</option>
+                            <option value="mpeg4">test</option>
                             <option value="option2">Опция 2</option>
                             <option value="option3">Опция 3</option>
                         </select>
@@ -94,7 +163,7 @@
                     <div class="label-select-pair-audio">
                     <label for="audio_codec">Codec:</label>
                     <select id="audio_codec" name="audio_codec">
-                        <option value="option1">Опция 1</option>
+                        <option value="libmp3lame">test</option>
                         <option value="option2">Опция 2</option>
                         <option value="option3">Опция 3</option>
                     </select>
@@ -104,8 +173,8 @@
                     <input class="data-input" id="audio_bitrate" name="audio_bitrate"/>
                     </div>
                     <div class="label-select-pair-audio">
-                    <label for="audio_framerate">Framerate:</label>
-                    <input class="data-input" id="audio_framerate" name="audio_framerate"/>
+                    <label for="audio_samplingRate">Sampling:</label>
+                    <input class="data-input" id="audio_samplingRate" name="audio_samplingRate"/>
                     </div>
                     <div class="label-select-pair-audio">
                     <label for="audio_channels">Channels:</label>
@@ -122,7 +191,51 @@
                 </div>
             </div>
 
+
+
+            <!-- second version -->
+
+
+            <div id="myModal3" class="modal3">
+                <div class="modal-header3">
+                    <div class="modal-content-types3">
+                        <button class="modal-content-types-audio3" onclick="showAudio3()">Audio</button>
+                    </div>
+                    <span class="close-btn3" onclick="closeModal3()">&times;</span>
+                </div>
+                <div class="modal-content3">
             
+                    <div class="label-select-pair-audio3">
+                        <label for="audio_codec3">Codec:</label>
+                        <select id="audio_codec3" name="audio_codec">
+                            <option value="libmp3lame">test</option>
+                            <option value="option2">Опция 2</option>
+                            <option value="option3">Опция 3</option>
+                        </select>
+                    </div>
+                    <div class="label-select-pair-audio3">
+                        <label for="audio_bitrate3">Bitrate:</label>
+                        <input class="data-input3" id="audio_bitrate3" name="audio_bitrate" />
+                    </div>
+                    <div class="label-select-pair-audio3">
+                        <label for="audio_samplingRate3">Sampling:</label>
+                        <input class="data-input3" id="audio_samplingRate3" name="audio_samplingRate" />
+                    </div>
+                    <div class="label-select-pair-audio"3>
+                        <label for="audio_channels3">Channels:</label>
+                        <select id="audio_channels3" name="audio_channels">
+                            <option value="2">Stereo</option>
+                            <option value="1">Mono</option>
+                        </select>
+                    </div>
+                    <div class="label-select-pair-audio3">
+                        <label for="audio_volume3">Volume:</label>
+                        <input type="range" id="audio_volume3" name="volume" min="0" max="200" step="1" value="100"
+                            oninput="updateVolume3(this.value)">
+                        <p id="volumeValue3">100%</p>
+                    </div>
+                </div>
+            </div>
         </section>
         
         <section class="third-section">

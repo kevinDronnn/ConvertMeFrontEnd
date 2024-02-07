@@ -159,7 +159,7 @@ a:hover
     &__converter-choose-input
         display: none
     &__converter-container2
-        display: inline-flex
+        display: none
         flex-direction: row
         justify-content: space-evenly
         align-items: center
@@ -183,7 +183,8 @@ a:hover
         justify-content: center
         align-items: center
         cursor: pointer
-        width: 40px
+        min-width: 40px
+        max-width: 70px
         height: 40px
         transition: height 0.2s, width 0.2s, background-color 0.2s
         border-radius: 10px
@@ -282,6 +283,7 @@ a:hover
     transform: translate(-50%, -50%)
     border: none
     background-color: #2D2D2A
+    box-shadow: 10px 10px 10px 10px #f7f3e336
     padding: 20px
     z-index: 1
     &-content
@@ -432,3 +434,430 @@ select:hover
     background-color: #D33F49
     height: 35px
     width: 85px
+
+// ----------------------------------------------------------------
+
+.modal2
+    display: none
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border: none
+    background-color: #2D2D2A
+    box-shadow: 10px 10px 10px 10px #f7f3e336
+    padding: 20px
+    z-index: 1
+    // &-content2
+    //     display: none
+    //     width: 400px
+    //     height: 500px
+
+.modal-header2
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 60px
+    background-color: #464646
+    display: flex
+    justify-content: center
+    justify-items: center
+    text-align: center
+    align-items: center
+
+.modal-content2
+    display: flex
+    flex-direction: column
+    justify-content: center
+    justify-items: center
+    align-content: center
+    align-items: center
+    width: 400px
+    height: 200px
+    margin-top: 80px
+
+.video-format2
+    display: flex
+    margin-bottom: 30px
+    justify-content: space-between
+    justify-items: center
+    align-content: center
+    align-items: center
+    ul
+        display: flex
+        justify-content: flex-start
+        flex-direction: row
+        flex-wrap: wrap
+        justify-items: center
+        align-content: center
+        align-items: center
+        li
+            cursor: pointer
+            height: 45px
+            font-size: 18px
+            min-width: 70px
+            max-width: 80px
+            border-radius: 5px
+            color: #2D2D2A
+            margin-right: 30px
+            background-color: #F7F3E3
+            border-radius: 5px
+            transition: background-color 0.2s
+            display: flex
+            justify-content: center
+            flex-direction: row
+            justify-items: center
+            align-content: center
+            align-items: center
+            margin-bottom: 30px
+            &:hover
+                background-color: #D33F49
+                span
+                    cursor: pointer
+
+.audio-format2
+    display: flex
+    margin-bottom: 30px
+    justify-content: space-between
+    justify-items: center
+    align-content: center
+    align-items: center
+    ul
+        display: flex
+        justify-content: flex-start
+        flex-direction: row
+        flex-wrap: wrap
+        justify-items: center
+        align-content: center
+        align-items: center
+        li
+            cursor: pointer
+            height: 45px
+            font-size: 18px
+            min-width: 70px
+            max-width: 80px
+            border-radius: 5px
+            color: #2D2D2A
+            margin-right: 30px
+            background-color: #F7F3E3
+            border-radius: 5px
+            transition: background-color 0.2s
+            display: flex
+            justify-content: center
+            flex-direction: row
+            justify-items: center
+            align-content: center
+            align-items: center
+            margin-bottom: 30px
+            &:hover
+                background-color: #D33F49
+        span
+            cursor: pointer
+
+.close-btn2
+    position: absolute
+    top: 10px
+    right: 10px
+    cursor: pointer
+    font-size: 24px
+    width: 20px
+    transition: width 0.2s, background-color 0.2s, color 0.2s
+    color: #F7F3E3
+.close-btn2:hover
+    background-color: #D33F49
+    color: #2D2D2A
+
+.modal-content-types2
+    display: flex
+    justify-content: center
+    justify-items: center
+    text-align: center
+    flex-direction: row
+
+.modal-content-types-video2
+    color: #F7F3E3
+    font-size: 18
+    margin-right: 70px
+    border: none
+    border-radius: 5px
+    background-color: #2D2D2A
+    cursor: pointer
+    transition: height 0.2s, width 0.2s, background-color 0.2s
+    width: 80px
+    height: 30px
+
+.modal-content-types-video2:hover
+    background-color: #D33F49
+    height: 35px
+    width: 85px
+.modal-content-types-video2:active
+    background-color: #D33F49
+    height: 35px
+    width: 85px
+
+.modal-content-types-audio2
+    color: #F7F3E3
+    font-size: 18
+    border: none
+    border-radius: 5px
+    background-color: #2D2D2A
+    cursor: pointer
+    transition: height 0.2s, width 0.2s, background-color 0.2s
+    width: 80px
+    height: 30px
+.modal-content-types-audio2:hover
+    background-color: #D33F49
+    height: 35px
+    width: 85px
+.modal-content-types-audio2:active
+    background-color: #D33F49
+    height: 35px
+    width: 85px
+
+// -----------------------------------------------------------------------------
+
+.modal3
+    display: none
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border: none
+    background-color: #2D2D2A
+    box-shadow: 10px 10px 10px 10px #f7f3e336
+    padding: 20px
+    z-index: 1
+
+.modal-header3
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 60px
+    background-color: #464646
+    display: flex
+    justify-content: center
+    justify-items: center
+    text-align: center
+    align-items: center
+
+.modal-content3
+    display: none
+    flex-direction: column
+    justify-content: center
+    justify-items: center
+    align-content: center
+    align-items: center
+    width: 400px
+    height: 200px
+    margin-top: 80px
+
+.label-select-pair-audio3
+    display: none
+    margin-bottom: 30px
+    justify-content: space-between
+    justify-items: center
+    align-content: center
+    align-items: center
+#volumeValue3
+    display: inline
+    color: #F7F3E3
+    margin-right: 40px
+
+label
+    margin-left: 85px
+    color: #F7F3E3
+
+select
+    display: flex
+    text-align: center
+    justify-content: center
+    justify-items: center
+    align-items: center
+    align-content: center
+    width: 140px
+    height: 30px
+    margin-right: 55px
+    color: #2D2D2A
+    border: none
+    border-radius: 5px
+    transition: height 0.4s, background-color 0.2s, color 0.2s
+select:hover
+    height: 35px
+    color: #F7F3E3
+    background-color: #D33F49
+.data-input3
+    display: flex
+    text-align: center
+    justify-content: center
+    justify-items: center
+    align-items: center
+    align-content: center
+    width: 140px
+    height: 30px
+    margin-right: 55px
+    color: #2D2D2A
+    border: none
+    border-radius: 5px
+    transition: height 0.4s, background-color 0.2s, color 0.2s
+.data-input3:hover
+    height: 35px
+    color: #F7F3E3
+    background-color: #D33F49
+.close-btn3
+    position: absolute
+    top: 10px
+    right: 10px
+    cursor: pointer
+    font-size: 24px
+    width: 20px
+    transition: width 0.2s, background-color 0.2s, color 0.2s
+    color: #F7F3E3
+.close-btn3:hover
+    background-color: #D33F49
+    color: #2D2D2A
+
+.modal-content-types3
+    display: flex
+    justify-content: center
+    justify-items: center
+    text-align: center
+    flex-direction: row
+
+.modal-content-types-audio3
+    color: #F7F3E3
+    font-size: 18
+    border: none
+    border-radius: 5px
+    background-color: #2D2D2A
+    cursor: pointer
+    transition: height 0.2s, width 0.2s, background-color 0.2s
+    width: 80px
+    height: 30px
+.modal-content-types-audio3:hover
+    background-color: #D33F49
+    height: 35px
+    width: 85px
+.modal-content-types-audio3:active
+    background-color: #D33F49
+    height: 35px
+    width: 85px
+
+// ----------------------------------------------------------------
+
+.modal4
+    display: none
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border: none
+    background-color: #2D2D2A
+    box-shadow: 10px 10px 10px 10px #f7f3e336
+    padding: 20px
+    z-index: 1
+
+.modal-header4
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 60px
+    background-color: #464646
+    display: flex
+    justify-content: center
+    justify-items: center
+    text-align: center
+    align-items: center
+
+.modal-content4
+    display: flex
+    flex-direction: column
+    justify-content: center
+    justify-items: center
+    align-content: center
+    align-items: center
+    width: 400px
+    height: 200px
+    margin-top: 80px
+
+.audio-format4
+    display: flex
+    margin-bottom: 30px
+    justify-content: space-between
+    justify-items: center
+    align-content: center
+    align-items: center
+    ul
+        display: flex
+        justify-content: flex-start
+        flex-direction: row
+        flex-wrap: wrap
+        justify-items: center
+        align-content: center
+        align-items: center
+        li
+            cursor: pointer
+            height: 45px
+            font-size: 18px
+            min-width: 70px
+            max-width: 80px
+            border-radius: 5px
+            color: #2D2D2A
+            margin-right: 30px
+            background-color: #F7F3E3
+            border-radius: 5px
+            transition: background-color 0.2s
+            display: flex
+            justify-content: center
+            flex-direction: row
+            justify-items: center
+            align-content: center
+            align-items: center
+            margin-bottom: 30px
+            &:hover
+                background-color: #D33F49
+        span
+            cursor: pointer
+
+.close-btn4
+    position: absolute
+    top: 10px
+    right: 10px
+    cursor: pointer
+    font-size: 24px
+    width: 20px
+    transition: width 0.2s, background-color 0.2s, color 0.2s
+    color: #F7F3E3
+.close-btn4:hover
+    background-color: #D33F49
+    color: #2D2D2A
+
+.modal-content-types4
+    display: flex
+    justify-content: center
+    justify-items: center
+    text-align: center
+    flex-direction: row
+
+.modal-content-types-audio4
+    color: #F7F3E3
+    font-size: 18
+    border: none
+    border-radius: 5px
+    background-color: #2D2D2A
+    cursor: pointer
+    transition: height 0.2s, width 0.2s, background-color 0.2s
+    width: 80px
+    height: 30px
+.modal-content-types-audio4:hover
+    background-color: #D33F49
+    height: 35px
+    width: 85px
+.modal-content-types-audio4:active
+    background-color: #D33F49
+    height: 35px
+    width: 85px
+
+// -----------------------------------------------------------------------------
