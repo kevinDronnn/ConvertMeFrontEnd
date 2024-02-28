@@ -22,8 +22,8 @@
                            </div>
                         </li>
                         <li class="nav-menu__list-item"><a href="Help.html">Help</a></li>
-                        <li class="nav-menu__list-item"><a href="#">Login</a></li>
-                        <li class="nav-menu__list-item"><a href="#">Sign up</a></li>
+                        <li class="nav-menu__list-item"><a href="loginPage.html">Login</a></li>
+                        <li class="nav-menu__list-item"><a href="registerPage.html">Sign up</a></li>
                     </ul>
                 </nav>
             </div>
@@ -36,7 +36,7 @@
                      <span class="second-section__info-par-span">formats</span>
                     </p>
             </div>
-            
+             
             </div>
                 <div class="second-section__converter-container" id="fileContainer">
                     <h2 class="second-section__converter-container-title">Drop file here</h2>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
 
-                <div class="second-section__converter-container2" id="resultContainer" style="display: none;">
+                <div class="second-section__converter-container2" id="resultContainer" >
                     <p class="second-section__converter-container-title2" id="fileName"></p>
                     <p class="second-section__converter-container-to2">To</p>
                     <button id="listOfFormars" onclick="openModalControl2()" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="second-section__converter-container-settings2">
@@ -127,6 +127,7 @@
                 <p class="second-section__converter-container-s2">Size:</p>
                 <p id="sizeOfFile" class="second-section__converter-container-size2">10.6 MB</p>
                 <input id="convertFile" class="second-section__converter-container-convertInput2" onclick="converterOfFileHandler()" type="submit" value="Convert">
+                <span class="close-btn0" onclick="closeConvertModule()">&times;</span>
             </div>
 
 

@@ -692,8 +692,7 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  min-width: 40px;
-  max-width: 70px;
+  width: 70px;
   height: 40px;
   -webkit-transition: height 0.2s, width 0.2s, background-color 0.2s;
   transition: height 0.2s, width 0.2s, background-color 0.2s;
@@ -703,7 +702,7 @@ a:hover {
 .second-section__converter-container-settings2:hover {
   background-color: #D33F49;
   height: 45px;
-  width: 70px;
+  width: 75px;
 }
 .second-section__converter-container-icon2 {
   display: -webkit-box;
@@ -1758,4 +1757,17 @@ select:hover {
   background-color: #D33F49;
   height: 35px;
   width: 85px;
+}
+
+.close-btn0 {
+  color: #F7F3E3;
+  cursor: pointer;
+  font-size: 35px;
+  -webkit-transition: font-size 0.2s, color 0.2s;
+  transition: font-size 0.2s, color 0.2s;
+}
+
+.close-btn0:hover {
+  font-size: 40px;
+  color: #D33F49;
 }

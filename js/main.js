@@ -114,8 +114,8 @@ function handleFileSelect() {
   var resultContainer = document.getElementById("resultContainer");
 
   if (fileInput.files.length > 0) {
-    // Скрыть первый контейнер
     fileContainer.style.display = "none";
+    resultContainer.style.display = "inline-flex";
 
     var file = fileInput.files[0];
 
@@ -138,8 +138,6 @@ function handleFileSelect() {
     }
     // Отобразить имя файла во втором контейнере
     document.getElementById("fileName").innerText = fileInput.files[0].name;
-    // Отобразить второй контейнер
-    resultContainer.style.display = "inline-flex";
   }
 }
 
@@ -571,4 +569,15 @@ function convertVideo(file) {
     .catch((error) => {
       console.error("There was a problem with the fetch operation:", error);
     });
+}
+
+function closeConvertModule() {
+  var secondContainer = document.getElementById("resultContainer");
+  var firstContainer = document.getElementById("fileContainer");
+  var fileInput = document.getElementById("fileInput");
+
+  fileInput.value = "";
+  secondContainer.style.display = "none";
+
+  firstContainer.style.display = "inline-flex";
 }
