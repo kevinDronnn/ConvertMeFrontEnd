@@ -14,10 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
     formData.append("email", email);
     formData.append("emailSubject", emailSubject);
     formData.append("emailText", emailText);
+    formData.append("email", "some@gmail.com"); // Добавляем email
+    formData.append("password", "password"); // Добавляем password
+
+    var headers = new Headers();
+    headers.append("Authorization", "Basic " + btoa("some@gmail.com:password")); // добавляем заголовок Authorization
 
     // Отправка данных на сервер с помощью fetch запроса
     fetch("http://localhost:8080/email/send", {
       method: "POST",
+      headers: headers,
       body: formData,
     })
       .then((response) => {

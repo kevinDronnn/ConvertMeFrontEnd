@@ -6,7 +6,8 @@
     <title>Convert Me</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="theme-color" content="#ffffff">
-    <script src="js/main.js"></script>
+    <script src="js/loginPage.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body style="background-color:#F7F3E3;">
     <!-- Первая секция -->
@@ -17,7 +18,9 @@
                         <li class="nav-menu__list-item logo">
                             <div class="logo_wrapper"> 
                                 <img src="/icons/logo.svg" alt="logo" class="main-section__logo" width="52" height="57">
-                                    <p class="conv">Convert Me</p>
+                                    <a href="Main.html">
+                                        <p class="conv">Convert Me</p>
+                                    </a>
                                 
                            </div>
                         </li>
@@ -28,6 +31,8 @@
                 </nav>
             </div>
         </section>
+        <span id="emailData"></span>
+        <span id="passwordData"></span>
         <section class="second-section">
             <div class="second-section__center-info">
             <div class="second-section__info">
@@ -145,7 +150,7 @@
                     <label for="video_codec">Codec:</label>
                         <select id="video_codec" name="video_codec">
                             <option value="mpeg4">for mp4</option>
-                            <option value="libx264 ">for mov</option>
+                            <option value="libx264">for mov</option>
                             <option value="libxvid">for avi</option>
                             <option value="mpeg2video">for mpeg2</option>
                             <option value="libtheora">for webm</option>

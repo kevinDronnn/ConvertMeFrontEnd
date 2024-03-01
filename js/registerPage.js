@@ -3,20 +3,27 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
-    var formData = new FormData(this);
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
 
+    var data = {
+      email: email,
+      password: password,
+    };
     fetch("http://localhost:8080/auth/register", {
       method: "POST",
-      body: formData,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
     })
       .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
+        if (response.ok) {
+          console.log("Registration successful");
+          window.location.href = "loginPage.html";
+        } else {
+          console.error("Registration failed");
         }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Success:", data);
       })
       .catch((error) => {
         console.error("Error:", error);

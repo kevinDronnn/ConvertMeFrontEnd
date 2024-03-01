@@ -1,3 +1,26 @@
+document.addEventListener("DOMContentLoaded", function () {
+  fetchData();
+});
+
+function fetchData() {
+  fetch("http://localhost:8080/auth/getData")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      // Обновляем HTML с использованием полученных данных
+      document.getElementById("emailData").textContent = data[0];
+      document.getElementById("passwordData").textContent = data[1];
+    })
+    .catch((error) => {
+      // Обработка ошибок
+      console.error("There was a problem with the fetch operation:", error);
+    });
+}
+
 function formatModal(element) {
   // Получаем родительский элемент <li> для элемента, на котором произошло событие
   var liElement = element.parentElement;
@@ -441,6 +464,8 @@ function convertAudio(file) {
   var file = fileInput.files[0];
   var fileName = fileInput.files[0].name;
   var fileExtension = fileName.split(".").pop().toLowerCase();
+  var emailData = document.getElementById("emailData").textContent;
+  var passwordData = document.getElementById("passwordData").textContent;
 
   var future = document.getElementById("listOfFormars");
 
@@ -463,9 +488,18 @@ function convertAudio(file) {
   formData.append("channels", channels.value);
   formData.append("future_extension", future.textContent.toLowerCase());
   formData.append("original_extension", fileExtension);
+  formData.append("email", emailData); // Добавляем email
+  formData.append("password", passwordData); // Добавляем password
+
+  var headers = new Headers();
+  headers.append(
+    "Authorization",
+    "Basic " + btoa(emailData + ":" + passwordData)
+  ); // добавляем заголовок Authorization
 
   var options = {
     method: "POST",
+    headers: headers, // добавляем заголовки к запросу
     body: formData,
   };
 
@@ -512,6 +546,8 @@ function convertVideo(file) {
 
   var final = "";
   final = fileName;
+  var emailData = document.getElementById("emailData").textContent;
+  var passwordData = document.getElementById("passwordData").textContent;
 
   var formData = new FormData();
   var volume = document.getElementById("volumeValue");
@@ -535,8 +571,17 @@ function convertVideo(file) {
   formData.append("audio_channels", channels.value);
   formData.append("future_extension", future.textContent.toLowerCase());
   formData.append("original_extension", fileExtension);
+  formData.append("email", emailData); // Добавляем email
+  formData.append("password", passwordData); // Добавляем password
+
+  var headers = new Headers();
+  headers.append(
+    "Authorization",
+    "Basic " + btoa(emailData + ":" + passwordData)
+  );
   var options = {
     method: "POST",
+    headers: headers, // добавляем заголовки к запросу
     body: formData,
   };
 

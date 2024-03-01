@@ -1,28 +1,42 @@
-document
-  .getElementById("login-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+document.addEventListener("DOMContentLoaded", function () {
+  var signupForm = document.getElementById("login-form");
+  if (signupForm) {
+    signupForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    // Получаем данные формы
-    var formData = new FormData(this);
+      email = document.getElementById("email").value;
+      password = document.getElementById("password").value;
 
-    // Отправляем данные на сервер
-    fetch("http://localhost:8080/login", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json(); // Декодируем ответ в формате JSON
+      var data = {
+        email: email,
+        password: password,
+      };
+
+      fetch("http://localhost:8080/auth/loginUser", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       })
-      .then((data) => {
-        console.log("Success:", data);
-        // Здесь можно добавить код для обработки успешного ответа
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        // Здесь можно добавить код для обработки ошибки
-      });
-  });
+        .then((response) => {
+          if (response.ok) {
+            console.log("Sign in successful");
+            fetch("http://localhost:8080/auth/setData", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            });
+            window.location.href = "Main.html";
+          } else {
+            console.error("Sign in failed");
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    });
+  }
+});
